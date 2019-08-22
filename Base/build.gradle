@@ -1,0 +1,17 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compile_sdk_version
+    buildToolsVersion rootProject.ext.build_tools_version
+    defaultConfig {
+        applicationId "com.example.pebbles_habbitapp"
+        minSdkVersion rootProject.ext.min_sdk_version
+        targetSdkVersion rootProject.ext.target_sdk_version
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    project(':App')
+}
