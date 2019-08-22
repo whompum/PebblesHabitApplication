@@ -1,6 +1,10 @@
-*.iml
+#IDE-Generated gradle files
 .gradle
+
+#User-Specfic mapping to their env's SDK
 /local.properties
+
+#User-Specific IDE files
 .idea/libraries/
 .idea/workspace.xml
 .idea/tasks.xml
@@ -11,8 +15,18 @@
 .idea/misc.xml
 .idea/modules.xml
 .idea/scopes/scope_settings.xml
+
+#IDE-Generated Module metadata
 *.iml
+
+#Mac specific config file apparently. Just ignore it.
 .DS_Store
+
+#Generated Files including APKs
 /build
+
+#Snapshots of layouts
 /captures
+
+#C/C++ linking files
 .externalNativeBuild
