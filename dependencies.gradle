@@ -17,6 +17,9 @@ ext {
     viewPager = 'androidx.viewpager:viewpager:1.0.0'
     annotation = 'androidx.annotation:annotation:1.0.0'
 
+    //External Dependencies
+    mockito = 'org.mockito:mockito-core:3.0.0'
+
 }
 
 
