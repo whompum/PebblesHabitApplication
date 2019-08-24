@@ -5,6 +5,10 @@ apply plugin: 'kotlin-android-extensions'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     //Include test dependencies.
+    implementation rootProject.ext.mockito
+
     implementation project(':CommonUI')
     implementation project(':Platform')
+    implementation project(':Data')
+    implementation project(':Models')
 }
