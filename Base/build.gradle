@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+//run - 'gradlew/ projectDependencyGraph to see my module graph
+apply from: 'https://raw.githubusercontent.com/JakeWharton/SdkSearch/master/gradle/projectDependencyGraph.gradle'
 
 android {
     compileSdkVersion rootProject.ext.compile_sdk_version
