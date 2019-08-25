@@ -20,6 +20,19 @@ ext {
     //External Dependencies
     mockito = 'org.mockito:mockito-core:3.0.0'
 
+    def daggerVersion = '2.24'
+
+    dagger = [
+            "com.google.dagger:dagger-android:$daggerVersion",
+            "com.google.dagger:dagger-android-support:$daggerVersion",
+            "com.google.dagger:dagger:$daggerVersion"
+    ]
+
+    daggerAnnotations = [
+            "com.google.dagger:dagger-compiler:$daggerVersion",
+            "com.google.dagger:dagger-android-processor:$daggerVersion"
+    ]
+
 }
 
 
