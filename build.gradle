@@ -18,7 +18,7 @@ apply from: 'dependencies.gradle'
 
 subprojects {
     afterEvaluate { project ->
-        if (project.hasProperty('android')) {
+        if (project.hasProperty('android') && project.name != 'Base') {
             android {
                 compileSdkVersion this.ext.compile_sdk_version
                 buildToolsVersion this.ext.build_tools_version
