@@ -1,11 +1,24 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    //Include test dependencies.
-    implementation rootProject.ext.mockito
+    def dependencies = rootProject.ext
+
+    implementation dependencies.jars
+
+    implementation dependencies.mockito
+
+    dependencies.dagger.each {
+        implementation it
+    }
+
+    dependencies.daggerAnnotations.each {
+        kapt it
+    }
+
+    testImplementation dependencies.junit
 
     implementation project(':CommonUI')
     implementation project(':Platform')

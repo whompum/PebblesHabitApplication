@@ -1,13 +1,27 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    def dependencies = rootProject.ext
 
-    implementation rootProject.ext.mockito
+    implementation dependencies.jars
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation dependencies.mockito
+    implementation dependencies.retrofit
+
+    implementation dependencies.room
+    kapt dependencies.roomAnnotation
+
+    dependencies.dagger.each {
+        implementation it
+    }
+
+    dependencies.daggerAnnotations.each {
+        kapt it
+    }
+
+    testImplementation dependencies.junit
 
     implementation project(':Models')
 }
