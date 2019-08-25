@@ -17,6 +17,11 @@ ext {
     viewPager = 'androidx.viewpager:viewpager:1.0.0'
     annotation = 'androidx.annotation:annotation:1.0.0'
 
+    def roomVersion = "2.2.0-beta01" //Switch to Alpha l8r
+
+    room = "androidx.room:room-runtime:$roomVersion"
+    roomAnnotation = "androidx.room:room-compiler:$roomVersion"
+
     //External Dependencies
     mockito = 'org.mockito:mockito-core:3.0.0'
 
@@ -32,6 +37,15 @@ ext {
             "com.google.dagger:dagger-compiler:$daggerVersion",
             "com.google.dagger:dagger-android-processor:$daggerVersion"
     ]
+
+    retrofit = 'com.squareup.retrofit2:retrofit:2.3.0'
+
+    timber = "com.jakewharton.timber:timber:4.7.1"
+
+    junit = "junit:junit:4.12"
+
+    //Embedded Jars
+    jars = fileTree(dir: 'libs', include: ['*.jar'])
 
 }
 
