@@ -6,6 +6,7 @@
 
 #User-Specific IDE files
 .idea/caches/build_file_checksums.ser
+.idea/codeStyles/codeStyleConfig.xml
 .idea/libraries/
 .idea/workspace.xml
 .idea/tasks.xml
