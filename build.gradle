@@ -1,20 +1,44 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = '1.3.41'
     repositories {
         google()
         jcenter()
-        
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.50'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
 }
 
+plugins {
+    id("io.gitlab.arturbosch.detekt").version("1.0.1")
+}
+
+detekt {
+    toolVersion = "1.0.1"
+    input = files("src/main/kotlin")
+    filters = ".*/resources/.*,.*/build/.*"
+    config = files("$projectDir/detektconfig.yml")
+    parallel = true
+    reports {
+        xml {
+            enabled = true
+            destination = file("$buildDir/reports/detekt-report.xml")
+        }
+    }
+    idea {
+        path = ".idea/"
+        codeStyleScheme = "codestyle.xml"
+        report = "$project.projectDir/reports"
+        mask = "*.kt,"
+    }
+}
+
 apply from: 'dependencies.gradle'
+apply from: 'versioning.gradle'
 
 subprojects {
     afterEvaluate { project ->
@@ -26,8 +50,8 @@ subprojects {
                 defaultConfig {
                     minSdkVersion this.ext.min_sdk_version
                     targetSdkVersion this.ext.target_sdk_version
-                    versionCode 1
-                    versionName "1.0"
+                    versionCode this.ext.code
+                    versionName "${this.ext.major}.${this.ext.minor}.${this.ext.subminor}"
                     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
                 }
 

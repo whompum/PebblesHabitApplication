@@ -1,0 +1,6 @@
+ext {
+    code = 1
+    major = "1"
+    minor = "0"
+    subminor = "0"
+}
