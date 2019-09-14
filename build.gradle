@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    apply from: 'dependencies.gradle'
-    apply from: 'versioning.gradle'
+    apply from: 'scripts/dependencies.gradle'
+    apply from: 'scripts/versioning.gradle'
     repositories {
         google()
         jcenter()
@@ -10,8 +10,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.0'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.50'
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
@@ -19,30 +17,10 @@ plugins {
     id("io.gitlab.arturbosch.detekt").version("1.0.1")
 }
 
-detekt {
-    toolVersion = "1.0.1"
-    input = files("src/main/kotlin")
-    filters = ".*/resources/.*,.*/build/.*"
-    config = files("$projectDir/detektconfig.yml")
-    parallel = true
-    reports {
-        xml {
-            enabled = true
-            destination = file("$buildDir/reports/detekt-report.xml")
-        }
-    }
-    idea {
-        path = ".idea/"
-        codeStyleScheme = "codestyle.xml"
-        report = "$project.projectDir/reports"
-        mask = "*.kt,"
-    }
-}
-
 subprojects {
     afterEvaluate { project ->
 
-        if (project.hasProperty('android') && project.path != ':Base') {
+        if (project.hasProperty('android') && project.path != ':Base' ) {
             android {
                 compileSdkVersion this.ext.compile_sdk_version
                 buildToolsVersion this.ext.build_tools_version
@@ -78,6 +56,8 @@ subprojects {
 }
 
 allprojects {
+    apply from: "$rootProject.rootDir/sca/ktlint.gradle"
+    apply from: "$rootProject.rootDir/sca/detekt.gradle"
     repositories {
         google()
         jcenter()
