@@ -1,8 +1,8 @@
 detekt {
     toolVersion = "1.0.1"
-    input = files("src/main/kotlin")
+    input = files("src/main/java")
     filters = ".*/resources/.*,.*/build/.*"
-    config = files("$projectDir/sca/detektconfig.yml")
+    config = files("$rootProject.projectDir/sca/detektconfig.yml")
     parallel = true
     reports {
         xml {
@@ -12,8 +12,8 @@ detekt {
     }
     idea {
         path = ".idea/"
-        codeStyleScheme = "codestyle.xml"
-        report = "$project.projectDir/reports"
+        codeStyleScheme = "$rootProject.projectDir/sca/codestyle.xml"
+        report = "$rootProject.projectDir/reports"
         mask = "*.kt,"
     }
 }
