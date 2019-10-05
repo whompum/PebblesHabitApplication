@@ -1,1 +1,6 @@
-include ':Base', ':CommonUI', ':App', ':Platform', ':Data', ':Models'
+include ':Base'
+include ':CommonUI'
+include ':App'
+include ':Platform'
+include ':Data'
+include ':Models'
