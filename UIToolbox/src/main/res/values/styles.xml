@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        TODO: Setup Common Styles and Themes.
+    -->
+
+    <style name="FabStyleNormal">
+        <item name="android:background">@color/color_foreground</item>
+    </style>
+</resources>

@@ -1,4 +1,4 @@
-package com.whompum.commonui
+package com.whompum.UIToolbox.List
 
 import android.view.LayoutInflater
 import android.view.View

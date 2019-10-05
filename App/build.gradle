@@ -20,7 +20,7 @@ dependencies {
 
     testImplementation dependencies.junit
 
-    implementation project(':CommonUI')
+    implementation project(':UIToolbox')
     implementation project(':Platform')
     implementation project(':Data')
     implementation project(':Models')
