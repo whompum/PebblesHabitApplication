@@ -1,34 +1,26 @@
 apply plugin: 'com.android.library'
-
-android {
-    compileSdkVersion rootProject.ext.compile_sdk_version
-    buildToolsVersion rootProject.ext.build_tools_version
-
-    defaultConfig {
-        minSdkVersion rootProject.ext.min_sdk_version
-        targetSdkVersion rootProject.ext.target_sdk_version
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    def dependencies = rootProject.ext
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation dependencies.jars
 
-    implementation project(':CommonUI')
+    implementation dependencies.mockito
+
+    implementation dependencies.room
+    kapt dependencies.roomAnnotation
+
+    dependencies.dagger.each {
+        implementation it
+    }
+
+    dependencies.daggerAnnotations.each {
+        kapt it
+    }
+
+    testImplementation dependencies.junit
+
     implementation project(':Data')
 }

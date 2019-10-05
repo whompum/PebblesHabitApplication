@@ -1,32 +1,27 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
-android {
-    compileSdkVersion rootProject.ext.compile_sdk_version
-    buildToolsVersion rootProject.ext.build_tools_version
-
-    defaultConfig {
-        minSdkVersion rootProject.ext.min_sdk_version
-        targetSdkVersion rootProject.ext.target_sdk_version
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-
-}
-
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    //Include test dependencies.
+    def dependencies = rootProject.ext
+
+    implementation dependencies.jars
+
+    implementation dependencies.mockito
+
+    dependencies.dagger.each {
+        implementation it
+    }
+
+    dependencies.daggerAnnotations.each {
+        kapt it
+    }
+
+    testImplementation dependencies.junit
+
     implementation project(':CommonUI')
     implementation project(':Platform')
+    implementation project(':Data')
+    implementation project(':Models')
 }
