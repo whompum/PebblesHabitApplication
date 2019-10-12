@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    Define app-wide themes here for support of different color pallets
+    and dark mode
+
+ -->
+<resources>
+
+    <style name="AppThemeMain" parent="Theme.AppCompat.Light">
+
+        <item name="positiveColor">@color/green</item>
+        <item name="negativeColor">@color/red</item>
+        <item name="highPriorityColor">@color/gold</item>
+
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="android:colorForeground">@color/milk_white</item>
+
+        <item name="colorError">@color/orange</item>
+        <item name="iconColorPrimary">@color/dark_grey</item>
+
+        <item name="paddingXLarge">@dimen/padding_xlarge</item>
+        <item name="paddingLarge">@dimen/padding_large</item>
+        <item name="paddingMedium">@dimen/padding_medium</item>
+        <item name="paddingDefault">@dimen/padding_default</item>
+
+        <item name="largeText">32dp</item>
+        <item name="mediumText">24dp</item>
+        <item name="standardText">14sp</item>
+        <item name="teenyWeenyText">12sp</item>
+
+        <item name="iconSize">24dp</item>
+        <item name="iconViewSize">48dp</item>
+
+        <item name="elevation">4dp</item>
+        <item name="cornerRadius">10dp</item>
+
+        <item name="android:textColorPrimary">@color/dark_grey</item>
+        <item name="android:textColorSecondary">@color/dark_grey</item>
+        <item name="android:textSize">?attr/standardText</item>
+        <item name="dialogCornerRadius">?attr/cornerRadius</item>
+        <item name="actionBarSize">56dp</item>
+    </style>
+
+</resources>

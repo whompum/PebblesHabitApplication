@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Color Pallate -->
+    <attr name="positiveColor" format="color" />
+    <attr name="negativeColor" format="color" />
+    <attr name="highPriorityColor" format="color" />
+
+    <attr name="colorError" format="color" />
+
+    <attr name="iconColorPrimary" format="color" />
+
+    <!-- Dimensions - Padding -->
+    <attr name="paddingXLarge" format="dimension" />
+    <attr name="paddingLarge" format="dimension" />
+    <attr name="paddingMedium" format="dimension" />
+    <attr name="paddingDefault" format="dimension" />
+
+    <!-- Dimensions - Text -->
+    <attr name="largeText" format="dimension" />
+    <attr name="mediumText" format="dimension" />
+    <attr name="standardText" format="dimension" />
+    <attr name="teenyWeenyText" format="dimension" />
+
+    <!-- Dimensions - Icons -->
+    <attr name="iconSize" format="dimension" />
+    <attr name="iconViewSize" format="dimension" />
+
+    <!-- Dimensions - Cards -->
+    <attr name="elevation" format="dimension" />
+    <attr name="cornerRadius" format="dimension" />
+
+
+</resources>

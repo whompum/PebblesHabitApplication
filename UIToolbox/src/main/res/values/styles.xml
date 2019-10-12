@@ -1,11 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+    Defines view styling here
+    TODO Setup Text Appearance
+ -->
 <resources>
 
-    <!--
-        TODO: Setup Common Styles and Themes.
-    -->
-
-    <style name="FabStyleNormal">
-        <item name="android:background">@color/color_foreground</item>
+    <style name="CustomCardView" parent="Base.CardView">
+        <item name="cardCornerRadius">?attr/cornerRadius</item>
+        <item name="cardElevation">?attr/elevation</item>
+        <item name="cardMaxElevation">?attr/elevation</item>
     </style>
+
 </resources>

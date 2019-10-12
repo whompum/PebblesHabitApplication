@@ -2,7 +2,6 @@
 <resources>
 
     <!-- Main Colors -->
-    <color name="white">@android:color/white</color>
     <color name="milk_white">#EDEDED</color>
     <color name="dark_grey">#616161</color>
 
@@ -11,16 +10,5 @@
     <color name="red">#D4251C</color>
     <color name="orange">#D16E28</color>
     <color name="gold">#D19E1B</color>
-
-    <!-- XML file assigning the colors to a use-case. E.g.
-         Milk-White is a bg color. In code, i reference this file -->
-    <color name="color_background">@color/milk_white</color>
-    <color name="color_foreground">@color/white</color>
-    <color name="color_text_main">@color/dark_grey</color>
-    <color name="color_habit_completed">@color/green</color>
-    <color name="color_habit_not_completed">@color/red</color>
-    <color name="color_high_priority">@color/gold</color>
-    <color name="color_error">@color/orange</color>
-    <color name="color_icon_main">@color/dark_grey</color>
 
 </resources>
