@@ -1,4 +1,4 @@
-package com.whompum.UIToolbox.List
+package com.whompum.uitoolbox
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -8,4 +8,5 @@ import androidx.recyclerview.widget.RecyclerView
  *
  * @author Bryan A. Mills
  */
-abstract class BindableViewHolder<T>(v: View) : RecyclerView.ViewHolder(v), Bindable<T>
+abstract class BindableViewHolder<T>(v: View) : RecyclerView.ViewHolder(v),
+    Bindable<T>
