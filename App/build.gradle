@@ -8,7 +8,12 @@ dependencies {
 
     implementation dependencies.jars
 
-    implementation dependencies.mockito
+    testImplementation dependencies.testCore
+    testImplementation dependencies.mockito
+    testImplementation dependencies.junit
+    testImplementation dependencies.junitAssertions
+
+    //testImplementation dependencies.robelectric
 
     dependencies.dagger.each {
         implementation it

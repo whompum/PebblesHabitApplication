@@ -17,7 +17,7 @@ buildscript {
 subprojects {
     afterEvaluate { project ->
 
-        if (project.hasProperty('android') && project.path != ':Base' ) {
+        if (project.hasProperty('android') && project.path != ':Base') {
             android {
                 compileSdkVersion this.ext.compile_sdk_version
                 buildToolsVersion this.ext.build_tools_version
@@ -45,6 +45,12 @@ subprojects {
                         buildConfigField "boolean", "enableLogs", "false"
                         minifyEnabled true
                         proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                    }
+                }
+
+                testOptions {
+                    unitTests {
+                        includeAndroidResources = true
                     }
                 }
             }

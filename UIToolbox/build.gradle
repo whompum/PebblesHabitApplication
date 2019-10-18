@@ -27,7 +27,9 @@ dependencies {
 
     implementation project(':Models')
 
-    implementation rootProject.ext.mockito
-
+    testImplementation dependencies.testCore
+    testImplementation dependencies.mockito
     testImplementation dependencies.junit
+    testImplementation dependencies.junitAssertions
+    testImplementation dependencies.robelectric
 }

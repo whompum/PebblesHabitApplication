@@ -24,6 +24,10 @@ ext {
 
     //External Dependencies
     mockito = 'org.mockito:mockito-core:3.0.0'
+    testCore = "androidx.test:core:1.0.0"
+    junit = "androidx.test:runner:1.1.0"
+    junitAssertions = "androidx.test.ext:junit:1.0.0"
+
 
     def daggerVersion = '2.24'
 
@@ -42,7 +46,7 @@ ext {
 
     timber = "com.jakewharton.timber:timber:4.7.1"
 
-    junit = "junit:junit:4.12"
+    robelectric = "org.robolectric:robolectric:4.3"
 
     //Embedded Jars
     jars = fileTree(dir: 'libs', include: ['*.jar'])

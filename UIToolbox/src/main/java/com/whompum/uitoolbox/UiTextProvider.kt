@@ -8,7 +8,6 @@ import androidx.annotation.IntRange
 import androidx.annotation.Size
 import androidx.annotation.StringRes
 import androidx.annotation.VisibleForTesting
-import com.whompum.commonui.R
 import com.whompum.models.Day
 import java.lang.ref.WeakReference
 import javax.inject.Inject
@@ -65,7 +64,6 @@ class UiTextProvider @Inject internal constructor(ctx: Resources) {
     /**
      * Returns a [String] representation of a single day. This will be the first letter
      * of a day. E.g. getDaySymbol(Day.Monday) == M
-     * TODO Consider moving from this class?
      */
     fun getDaySymbol(day: Day): String {
         return getDay(day)!!.substring(0..1)
@@ -88,17 +86,20 @@ class UiTextProvider @Inject internal constructor(ctx: Resources) {
     fun getPercentageString(@FloatRange(from = 0.0, to = 1.0) value: Float): String {
         var strPercent = ""
 
+        val wholeNum = (value * 100).toInt()
+
         // Isolation strings only. E.g. Those whose string values are one word only
-        if (value in 0.0..0.19)
+        if (wholeNum <= 19 || (wholeNum % 10 == 0 && wholeNum != 100))
             strPercent = getFormatted(
                 R.string.isolated_pebble_value,
-                getIsolatedStringRepresentation(value)!!
+                getIsolatedStringRepresentation(wholeNum)!!
             )!!
-        else if (value in 0.2..1.0)
+        else if (wholeNum <= 100 && wholeNum % 10 != 0) {
+            val compound = getCompoundStringRepresentation(wholeNum)
             strPercent = getFormatted(
-                R.string.compound_pebble_value,
-                getCompoundStringRepresentation(value)
+                R.string.compound_pebble_value, compound.first, compound.second
             )!!
+        }
 
         return strPercent
     }
@@ -132,28 +133,29 @@ class UiTextProvider @Inject internal constructor(ctx: Resources) {
      * Returns a [String] representation of a number / percentage whose value can be
      * expressed with only one word. E.g. 1 / 0.1 = "One"
      */
-    fun getIsolatedStringRepresentation(@FloatRange(from = 0.0, to = 0.19) value: Float) =
+    fun getIsolatedStringRepresentation(@IntRange(from = 0, to = 20) value: Int) =
         when (value) {
-            0F -> get(R.string.zero)
-            0.01F -> get(R.string.one)
-            0.02F -> get(R.string.two)
-            0.03F -> get(R.string.three)
-            0.04F -> get(R.string.four)
-            0.05F -> get(R.string.five)
-            0.06F -> get(R.string.six)
-            0.07F -> get(R.string.seven)
-            0.08F -> get(R.string.eight)
-            0.09F -> get(R.string.nine)
-            0.10F -> get(R.string.ten)
-            0.11F -> get(R.string.eleven)
-            0.12F -> get(R.string.twelve)
-            0.13F -> get(R.string.thirteen)
-            0.14F -> get(R.string.fourteen)
-            0.15F -> get(R.string.fifteen)
-            0.16F -> get(R.string.sixteen)
-            0.17F -> get(R.string.seventeen)
-            0.18F -> get(R.string.eighteen)
-            0.19F -> get(R.string.nineteen)
+            0 -> get(R.string.zero)
+            1 -> get(R.string.one)
+            2 -> get(R.string.two)
+            3 -> get(R.string.three)
+            4 -> get(R.string.four)
+            5 -> get(R.string.five)
+            6 -> get(R.string.six)
+            7 -> get(R.string.seven)
+            8 -> get(R.string.eight)
+            9 -> get(R.string.nine)
+            10 -> get(R.string.ten)
+            11 -> get(R.string.eleven)
+            12 -> get(R.string.twelve)
+            13 -> get(R.string.thirteen)
+            14 -> get(R.string.fourteen)
+            15 -> get(R.string.fifteen)
+            16 -> get(R.string.sixteen)
+            17 -> get(R.string.seventeen)
+            18 -> get(R.string.eighteen)
+            19 -> get(R.string.nineteen)
+            20 -> get(R.string.twenty)
             else -> ""
         }
 
@@ -161,9 +163,50 @@ class UiTextProvider @Inject internal constructor(ctx: Resources) {
      * Returns a [String] representation of a number / percentage whose value is
      * represented by at least two words. E.g. 22 / 0.22 = "TwentyTwo"
      */
-    fun getCompoundStringRepresentation(@FloatRange(from = 0.2, to = 1.0) value: Float): String {
+    fun getCompoundStringRepresentation(
+        @IntRange(
+            from = 21,
+            to = 100
+        ) value: Int
+    ): Pair<String, String> {
         //Split the value into ones and tens and return the proper value from each category
-        return ""
+
+        //Convert to whole number between 0 and 100
+        val wholeNumber = (value * 100)
+
+        var firstValue: String? = null
+        var secondValue: String? = null
+
+        if (wholeNumber in 21..29) {
+            firstValue = get(R.string.twenty)
+            secondValue = getIsolatedStringRepresentation(wholeNumber - 20)
+        } else if (wholeNumber in 31..39) {
+            firstValue = get(R.string.thirty)
+            secondValue = getIsolatedStringRepresentation(wholeNumber - 30)
+        } else if (wholeNumber in 41..49) {
+            firstValue = get(R.string.fourty)
+            secondValue = getIsolatedStringRepresentation(wholeNumber - 40)
+        } else if (wholeNumber in 51..59) {
+            firstValue = get(R.string.fifteen)
+            secondValue = getIsolatedStringRepresentation(wholeNumber - 50)
+        } else if (wholeNumber in 61..69) {
+            firstValue = get(R.string.sixteen)
+            secondValue = getIsolatedStringRepresentation(wholeNumber - 60)
+        } else if (wholeNumber in 71..79) {
+            firstValue = get(R.string.seventeen)
+            secondValue = getIsolatedStringRepresentation(wholeNumber - 70)
+        } else if (wholeNumber in 81..89) {
+            firstValue = get(R.string.eighteen)
+            secondValue = getIsolatedStringRepresentation(wholeNumber - 80)
+        } else if (wholeNumber in 91..99) {
+            firstValue = get(R.string.nineteen)
+            secondValue = getIsolatedStringRepresentation(wholeNumber - 90)
+        } else if (wholeNumber == 100) {
+            firstValue = get(R.string.one)
+            secondValue = get(R.string.hundred)
+        } else throw IllegalArgumentException("Value must have a Tens and Ones spot AND be less than 100, OR be 100")
+
+        return Pair(firstValue!!, secondValue!!)
     }
 
     /**
