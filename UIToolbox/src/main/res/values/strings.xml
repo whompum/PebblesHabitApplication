@@ -33,7 +33,7 @@
     <string name="editor">Editor</string>
     <string name="habits">Habits</string>
     <string name="title">Title</string>
-    <string name="title_count_formatter">(%1$s / 20)</string>
+    <string name="title_count_formatter">(%1$d / 20)</string>
     <string name="enter_title_here">Enter Title Here</string>
     <string name="title_taken_error">Title is Currently Being Used</string>
     <string name="title_empty_error">Title Must Not be Empty</string>
@@ -80,7 +80,7 @@
     <string name="fifty">Fifty</string>
     <string name="sixty">Sixty</string>
     <string name="seventy">Seventy</string>
-    <string name="eighty">Eigthy</string>
+    <string name="eighty">Eighty</string>
     <string name="ninety">Ninety</string>
     <string name="hundred">Hundred</string>
 
