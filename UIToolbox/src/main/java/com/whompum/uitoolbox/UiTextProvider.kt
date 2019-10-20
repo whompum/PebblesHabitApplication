@@ -16,7 +16,6 @@ import javax.inject.Inject
  * Utility class for dealing with [strings.xml]
  * Exposing simple proxy methods to clients, avoiding redundant
  * logic to fetch / format strings
- * TODO Setup compound percent helper method
  */
 class UiTextProvider @Inject internal constructor(ctx: Resources) {
 
@@ -29,8 +28,7 @@ class UiTextProvider @Inject internal constructor(ctx: Resources) {
     /**
      * Attaches a [Context] object to this class
      */
-    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
-    fun attach(ctx: Resources) {
+    private fun attach(ctx: Resources) {
         res = WeakReference(ctx)
     }
 
@@ -161,7 +159,6 @@ class UiTextProvider @Inject internal constructor(ctx: Resources) {
             70 -> get(R.string.seventy)
             80 -> get(R.string.eighty)
             90 -> get(R.string.ninety)
-            //TODO Account for other values like Fifty / Sixty / Seventy
             else -> ""
         }
 
@@ -169,6 +166,7 @@ class UiTextProvider @Inject internal constructor(ctx: Resources) {
      * Returns a [String] representation of a number / percentage whose value is
      * represented by at least two words. E.g. 22 / 0.22 = "TwentyTwo"
      */
+    @VisibleForTesting(otherwise = VisibleForTesting.PRIVATE)
     fun getCompoundStringRepresentation(
         @IntRange(
             from = 21,
