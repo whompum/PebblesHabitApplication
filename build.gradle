@@ -16,13 +16,16 @@ buildscript {
 
 subprojects {
     afterEvaluate { project ->
-
-        if (project.hasProperty('android') && project.path != ':Base') {
+        if (project.hasProperty('android')) {
             android {
                 compileSdkVersion this.ext.compile_sdk_version
                 buildToolsVersion this.ext.build_tools_version
 
                 defaultConfig {
+
+                    if (project.path == ':Base')
+                        applicationId = "com.example.pebbles_habbitapp"
+
                     minSdkVersion this.ext.min_sdk_version
                     targetSdkVersion this.ext.target_sdk_version
                     versionCode this.ext.code
