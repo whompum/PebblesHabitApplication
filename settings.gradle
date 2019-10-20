@@ -1,1 +1,1 @@
-include ':Base', ':UIToolbox', ':App', ':Platform', ':Data', ':Models'
+include ':LaunchModule', ':UIToolbox', ':App', ':Platform', ':Data', ':Models'
