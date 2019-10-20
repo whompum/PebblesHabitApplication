@@ -1,4 +1,4 @@
-package com.whompum.commonui
+package com.whompum.uitoolbox.List
 
 import android.view.LayoutInflater
 import android.view.View

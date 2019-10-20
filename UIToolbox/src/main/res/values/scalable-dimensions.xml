@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    Resource file only for adjustable sizings based on screen width
+ -->
+<resources>
+    <dimen name="padding_default">8dp</dimen>
+    <dimen name="padding_medium">12dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_xlarge">24dp</dimen>
+</resources>

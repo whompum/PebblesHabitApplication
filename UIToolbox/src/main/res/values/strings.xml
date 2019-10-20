@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Strings Related to Time -->
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thurs</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+    <string name="sunday">Sun</string>
+
+    <string name="two_day_formatter">%1$s . %2$s</string>
+    <string name="three_day_formatter">%1$s . %2$s . %3$s</string>
+    <string name="four_day_formatter">%1$s . %2$s . %3$s . %4$s</string>
+    <string name="five_day_formatter">%1$s . %2$s . %3$s . %4$s . %5$s</string>
+    <string name="six_day_formatter">%1$s . %2$s . %3$s . %4$s . %5$s . %6$s</string>
+    <string name="seven_day_formatter">%1$s . %2$s . %3$s . %4$s . %5$s . %6$s . %7$s</string>
+
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="everyday">Everyday</string>
+    <string name="weekdays">Weekdays</string>
+    <string name="weekends">Weekends</string>
+
+    <!-- Strings related to the Dashboard -->
+    <string name="dashboard">Dashboard</string>
+    <string name="habit_status">Current Status</string>
+    <string name="habit_completion_amount">Total Times Completed</string>
+    <string name="estimated_score_increase">Estimated Score After Completion</string>
+
+    <!-- Strings related to the Editor -->
+    <string name="editor">Editor</string>
+    <string name="habits">Habits</string>
+    <string name="title">Title</string>
+    <string name="title_count_formatter">(%1$d / 20)</string>
+    <string name="enter_title_here">Enter Title Here</string>
+    <string name="title_taken_error">Title is Currently Being Used</string>
+    <string name="title_empty_error">Title Must Not be Empty</string>
+    <string name="repeat_mode">Repeat Mode</string>
+    <string name="priority">Priority</string>
+    <string name="notification">Notification</string>
+    <string name="do_not_send">Do Not Send</string>
+
+    <!-- Strings related to priority -->
+    <string name="standard">Default</string>
+    <string name="medium">Medium</string>
+    <string name="High">High</string>
+
+    <!-- Strings related to Statistics -->
+    <string name="chart">Chart</string>
+    <string name="day_by_day">Day By Day</string>
+
+    <!-- Strings related to Pebble Values-->
+    <string name="compound_pebble_value">%1$s-%2$s Percent</string>
+    <string name="isolated_pebble_value">%1$s Percent</string>
+    <string name="zero">Zero</string>
+    <string name="one">One</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+    <string name="four">Four</string>
+    <string name="five">Five</string>
+    <string name="six">Six</string>
+    <string name="seven">Seven</string>
+    <string name="eight">Eight</string>
+    <string name="nine">Nine</string>
+    <string name="ten">Ten</string>
+    <string name="eleven">Eleven</string>
+    <string name="twelve">Twelve</string>
+    <string name="thirteen">Thirteen</string>
+    <string name="fourteen">Fourteen</string>
+    <string name="fifteen">Fifteen</string>
+    <string name="sixteen">Sixteen</string>
+    <string name="seventeen">Seventeen</string>
+    <string name="eighteen">Eigtheen</string>
+    <string name="nineteen">Nineteen</string>
+    <string name="twenty">Twenty</string>
+    <string name="thirty">Thirty</string>
+    <string name="fourty">Forty</string>
+    <string name="fifty">Fifty</string>
+    <string name="sixty">Sixty</string>
+    <string name="seventy">Seventy</string>
+    <string name="eighty">Eighty</string>
+    <string name="ninety">Ninety</string>
+    <string name="hundred">Hundred</string>
+
+
+</resources>

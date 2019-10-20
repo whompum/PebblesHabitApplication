@@ -1,6 +1,1 @@
-include ':Base'
-include ':CommonUI'
-include ':App'
-include ':Platform'
-include ':Data'
-include ':Models'
+include ':Base', ':UIToolbox', ':App', ':Platform', ':Data', ':Models'

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main Colors -->
+    <color name="milk_white">#EDEDED</color>
+    <color name="dark_grey">#616161</color>
+
+    <!-- Default Color Pallete -->
+    <color name="green">#00AA6A</color>
+    <color name="red">#D4251C</color>
+    <color name="orange">#D16E28</color>
+    <color name="gold">#D19E1B</color>
+
+</resources>
