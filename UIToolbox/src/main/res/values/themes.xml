@@ -41,8 +41,8 @@
     </style>
 
     <style name="LaunchTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimaryDark">@android:color/darker_gray</item>
-        <item name="android:navigationBarColor">@android:color/darker_gray</item>
+        <item name="colorPrimaryDark">@color/dark_grey</item>
+        <item name="android:navigationBarColor">@color/dark_grey</item>
         <item name="android:windowBackground">@drawable/launch_drawable</item>
     </style>
 
