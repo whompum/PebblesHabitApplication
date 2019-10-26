@@ -1,6 +1,7 @@
-package com.whompum.base
+package com.whompum.app
 
 import android.app.Application
+import timber.log.Timber
 
 /**
  * Base [Application] class for this project.
@@ -8,10 +9,10 @@ import android.app.Application
  */
 class MainApplication: Application() {
 
-    /*override fun onCreate() {
+    override fun onCreate() {
         super.onCreate()
-        //Configure Timber here
-        //Configure Dagger component here
-    }*/
+        //if (BuildConfig.enableLogs)
+            //Timber.plant(Timber.asTree())
+    }
 
 }

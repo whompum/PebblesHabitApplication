@@ -1,32 +1,27 @@
-apply plugin: 'com.android.library'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-android-extensions'
 
 dependencies {
-    def dependencies = rootProject.ext
+    implementation project(':UIToolbox')
 
-    implementation dependencies.jars
+    implementation rootProject.ext.timber
 
-    testImplementation dependencies.testCore
-    testImplementation dependencies.mockito
-    testImplementation dependencies.junit
-    testImplementation dependencies.junitAssertions
-
-    //testImplementation dependencies.robelectric
-
-    dependencies.dagger.each {
+    /**
+     * The root DI component is made in this module, so bring in Dagger
+     */
+    rootProject.ext.dagger.each {
         implementation it
     }
 
-    dependencies.daggerAnnotations.each {
+    rootProject.ext.daggerAnnotations.each {
         kapt it
     }
 
-    testImplementation dependencies.junit
-
-    implementation project(':UIToolbox')
-    implementation project(':Platform')
-    implementation project(':Data')
-    implementation project(':Models')
+    implementation "androidx.core:core-ktx:1.1.0"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

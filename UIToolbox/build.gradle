@@ -26,6 +26,7 @@ dependencies {
     }
 
     implementation project(':Models')
+    implementation project(':SharedModule')
 
     testImplementation dependencies.testCore
     testImplementation dependencies.mockito

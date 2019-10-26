@@ -40,4 +40,9 @@
         <item name="actionBarSize">56dp</item>
     </style>
 
+    <style name="LaunchTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@drawable/launch_drawable</item>
+    </style>
+
 </resources>
