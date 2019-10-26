@@ -6,10 +6,8 @@
     <item android:drawable="@android:color/darker_gray" />
 
     <!-- Your product logo - 144dp color version of your app icon -->
-   <item
-       android:gravity="center"
-       android:width="144dp"
-       android:height="144dp"
-       android:drawable="@drawable/icon_splash"/>
+    <item
+        android:drawable="@drawable/icon_splash"
+        android:gravity="center" />
 
 </layer-list>
