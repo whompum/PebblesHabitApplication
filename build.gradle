@@ -26,7 +26,7 @@ subprojects {
 
                 defaultConfig {
 
-                    if (project.path == ':LaunchModule')
+                    if (project.path == ':App')
                         applicationId = "com.example.pebbles_habbitapp"
 
                     minSdkVersion this.ext.min_sdk_version
@@ -34,6 +34,12 @@ subprojects {
                     versionCode this.ext.code
                     versionName "${this.ext.major}.${this.ext.minor}.${this.ext.subminor}"
                     testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+                    def fileProperties = new Properties()
+                    fileProperties.load(new FileInputStream(file("adminCredentials.properties")))
+                    buildConfigField "String", "ADMIN_USERNAME", fileProperties['AdminUsername']
+                    buildConfigField "String", "ADMIN_PASSWORD", fileProperties['AdminPassword']
+                    buildConfigField "boolean", "USE_ADMIN_ACCOUNT", "true"
                 }
 
                 buildTypes {
@@ -49,6 +55,7 @@ subprojects {
                     release {
                         debuggable false
                         buildConfigField "boolean", "enableLogs", "false"
+                        buildConfigField "boolean", "USE_ADMIN_ACCOUNT", "false"
                         minifyEnabled true
                         proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
                     }

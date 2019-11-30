@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="username_Max_EMS">10</integer>
+    <integer name="password_Max_EMS">12</integer>
+    <integer name="credentials_max_line">1</integer>
+</resources>

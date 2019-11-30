@@ -5,6 +5,7 @@ apply plugin: 'kotlin-kapt'
 
 dependencies {
     implementation project(':UIToolbox')
+    implementation project(':SharedModule')
 
     implementation rootProject.ext.timber
 

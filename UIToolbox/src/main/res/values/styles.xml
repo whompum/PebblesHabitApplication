@@ -4,10 +4,62 @@
  -->
 <resources>
 
-    <style name="CustomCardView" parent="Base.CardView">
-        <item name="cardCornerRadius">?attr/cornerRadius</item>
-        <item name="cardElevation">?attr/elevation</item>
-        <item name="cardMaxElevation">?attr/elevation</item>
+    <style name="Widget.MaterialComponents.Button.CustomButton">
+        <item name="android:textSize">?attr/mFontSizeM</item>
+        <item name="backgroundTint">?attr/mColorButton</item>
+        <item name="android:minHeight">?attr/mMinButtonHeight</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.FloatingActionButton.CustomFab">
+        <item name="backgroundTint">?attr/mColorFab</item>
+        <item name="elevation">20dp</item> <!-- Hardcode in case its over a cardview -->
+        <item name="maxImageSize">?attr/mIconContentSize</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.CardView.CustomCard">
+        <item name="cardBackgroundColor">@android:color/white</item>
+        <item name="cardElevation">?attr/mCardElevation</item>
+        <item name="cardMaxElevation">?attr/mCardElevation</item>
+        <item name="cardCornerRadius">?attr/mCardCornerRadius</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.Snackbar.ErrorSnackbar">
+        <!-- Override background for material snackbar regardless of internal theming -->
+        <item name="android:background">@color/orange</item>
+    </style>
+
+    <style name="TextAppearance.Design.Snackbar.Message.CustomSnackbarText">
+        <item name="android:textSize">?attr/mFontSize</item>
+    </style>
+
+    <!-- Forces use of the View Ports complete Height in a LinearLayout -->
+    <style name="VerticalFill">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!-- Forces use of the View Ports complete Width in a LinearLayout -->
+    <style name="HorizontalFill">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="GuideLineHorizontalStart">
+        <item name="android:id">@id/guide_margin_start</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="layout_constraintGuide_percent">0.03</item>
+    </style>
+
+    <style name="GuideLineHorizontalEnd">
+        <item name="android:id">@id/guide_margin_end</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="layout_constraintGuide_percent">0.97</item>
     </style>
 
 </resources>

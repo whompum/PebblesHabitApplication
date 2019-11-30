@@ -22,5 +22,5 @@
 #C/C++ linking files
 .externalNativeBuild
 
-#Custom Todo files
-*TODO
+#Custom Files
+/Scratches

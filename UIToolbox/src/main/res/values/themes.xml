@@ -1,46 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?><!--
     Define app-wide themes here for support of different color pallets
     and dark mode
-
+    TODO: Update styles for  Material Themes
+    TODO: Create Text Appearance!
  -->
 <resources>
 
-    <style name="AppThemeMain" parent="Theme.AppCompat.Light">
+    <style name="AppThemeMain" parent="Theme.MaterialComponents.Light.NoActionBar">
 
-        <item name="positiveColor">@color/green</item>
-        <item name="negativeColor">@color/red</item>
-        <item name="highPriorityColor">@color/gold</item>
-
-        <item name="android:colorBackground">@android:color/white</item>
-        <item name="android:colorForeground">@color/milk_white</item>
-
-        <item name="colorError">@color/orange</item>
-        <item name="iconColorPrimary">@color/dark_grey</item>
-
-        <item name="paddingXLarge">@dimen/padding_xlarge</item>
-        <item name="paddingLarge">@dimen/padding_large</item>
-        <item name="paddingMedium">@dimen/padding_medium</item>
-        <item name="paddingDefault">@dimen/padding_default</item>
-
-        <item name="largeText">32dp</item>
-        <item name="mediumText">24dp</item>
-        <item name="standardText">14sp</item>
-        <item name="teenyWeenyText">12sp</item>
-
-        <item name="iconSize">24dp</item>
-        <item name="iconViewSize">48dp</item>
-
-        <item name="elevation">4dp</item>
-        <item name="cornerRadius">10dp</item>
-
+        <!-- Android Attributes -->
+        <item name="colorPrimary">@color/dark_grey</item>
+        <item name="colorPrimaryDark">@color/dark_grey</item>
+        <item name="colorAccent">@color/red</item>
         <item name="android:textColorPrimary">@color/dark_grey</item>
-        <item name="android:textColorSecondary">@color/dark_grey</item>
-        <item name="android:textSize">?attr/standardText</item>
-        <item name="dialogCornerRadius">?attr/cornerRadius</item>
-        <item name="actionBarSize">56dp</item>
+
+        <item name="android:textSize">14sp</item> <!-- Affects TextViews-->
+
+        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button.CustomButton</item>
+        <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton.CustomFab</item>
+        <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView.CustomCard</item>
+        <item name="snackbarTextViewStyle">@style/TextAppearance.Design.Snackbar.Message.CustomSnackbarText</item>
+
+        <item name="android:windowActivityTransitions">true</item>
+
+        <item name="android:windowEnterTransition">@android:transition/explode</item>
+        <item name="android:windowExitTransition">@android:transition/explode</item>
+
+        <!-- Local Attributes -->
+        <item name="mColorError">@color/orange</item>
+        <item name="mIconTint">@color/dark_grey</item>
+        <item name="mColorButton">@color/dark_grey</item>
+        <item name="mColorFab">@android:color/white</item>
+
+        <item name="mSpaceXL">@dimen/padding_xlarge</item>
+        <item name="mSpaceL">@dimen/padding_large</item>
+        <item name="mSpaceM">@dimen/padding_medium</item>
+        <item name="mSpace">@dimen/padding_default</item>
+
+        <item name="mFontSizeL">32dp</item> <!-- Keep as DP! -->
+        <item name="mFontSizeM">18dp</item> <!-- Keep as DP! -->
+        <item name="mFontSize">14sp</item>
+        <item name="mFontSizeS">12sp</item>
+
+        <item name="mTextBoxMinHieght">@dimen/text_input_min_height</item>
+        <item name="mMinButtonHeight">@dimen/button_min_height</item>
+        <item name="mCardElevation">@dimen/card_elevation</item>
+        <item name="mCardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="mIconContentSize">@dimen/icon_size</item>
+
+        <item name="mMinTouchTarget">@dimen/text_input_min_height</item>
     </style>
 
-    <style name="LaunchTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppThemeMain.LaunchTheme"> <!-- Migrate to the main launch module -->
         <item name="colorPrimaryDark">@color/dark_grey</item>
         <item name="android:navigationBarColor">@color/dark_grey</item>
         <item name="android:windowBackground">@drawable/launch_drawable</item>
