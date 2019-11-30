@@ -8,11 +8,12 @@ import timber.log.Timber.DebugTree
  * Base [Application] class for this project.
  * This includes configuration for [Timber] and [Dagger].
  */
-class MainApplication: Application() {
+class MainApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        Timber.plant(DebugTree())
+        if (BuildConfig.DEBUG)
+            Timber.plant(DebugTree())
     }
 
 }
