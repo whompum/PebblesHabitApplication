@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pebbles Routine Log</string>
+    <!--Password Validation-->
+    <string name="email_validation">/^[a-zA-Z0-9#_~!$&amp;\'()*+,;=:."(),:;&lt;&gt;@\[\]\\]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*$/</string>
+
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="login">Login</string>
+
+    <string name="need_help_signing_in">Need Help Signing In?</string>
+    <string name="stay_logged_in">Stay Logged In?</string>
+
+    <!--Handling Errors-->
+    <string name="invalid_credentials_error">Incorrect Username or Password</string>
+    <string name="invalid_username_error">The Username is Invalid</string>
+    <string name="invalid_password_error">The Password is Invalid</string>
+    <string name="empty_username_error">The Username Cannot Be Empty</string>
+    <string name="empty_password_error">The Password Cannot Be Empty</string>
+
+</resources>

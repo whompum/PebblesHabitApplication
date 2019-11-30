@@ -14,6 +14,7 @@ dependencies {
     api dependencies.appCompat
     api dependencies.viewPager
     api dependencies.fragment
+    api dependencies.materialComponents
 
     implementation dependencies.annotation
 
@@ -26,6 +27,7 @@ dependencies {
     }
 
     implementation project(':Models')
+    implementation project(':SharedModule')
 
     testImplementation dependencies.testCore
     testImplementation dependencies.mockito

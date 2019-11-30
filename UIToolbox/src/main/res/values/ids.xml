@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="root_view" type="id"/>
+    <item name="main_content_container" type="id"/>
+
+    <item name="main_fab" type="id"/>
+
+    <item name="app_icon" type="id"/>
+    <item name="app_title" type="id"/>
+
+    <!-- Margin Guides from ConstraintLayout: Guideline-->
+    <item name="guide_margin_top" type="id"/>
+    <item name="guide_margin_bottom" type="id"/>
+    <item name="guide_margin_start" type="id"/>
+    <item name="guide_margin_end" type="id"/>
+</resources>

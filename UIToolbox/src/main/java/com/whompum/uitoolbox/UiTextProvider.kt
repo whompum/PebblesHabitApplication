@@ -8,6 +8,7 @@ import androidx.annotation.IntRange
 import androidx.annotation.Size
 import androidx.annotation.StringRes
 import androidx.annotation.VisibleForTesting
+import com.whompum.sharedmodule.Annotations.UIResource
 import com.whompum.models.Day
 import java.lang.ref.WeakReference
 import javax.inject.Inject
@@ -17,6 +18,7 @@ import javax.inject.Inject
  * Exposing simple proxy methods to clients, avoiding redundant
  * logic to fetch / format strings
  */
+@UIResource
 class UiTextProvider @Inject internal constructor(ctx: Resources) {
 
     init {

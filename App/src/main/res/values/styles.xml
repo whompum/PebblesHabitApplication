@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CredentialsTextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintEnabled">true</item>
+        <item name="hintTextColor">@color/dark_grey</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="counterEnabled">false</item>
+        <item name="errorTextColor">?attr/colorError</item>
+        <item name="boxStrokeColor">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="CredentialsTextInput.Password">
+        <item name="passwordToggleEnabled">true</item>
+        <item name="passwordToggleTint">?attr/mIconTint</item>
+    </style>
+
+</resources>
