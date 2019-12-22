@@ -8,6 +8,8 @@ dependencies {
 
     implementation dependencies.jars
 
+    implementation dependencies.viewPager
+
     testImplementation dependencies.testCore
     testImplementation dependencies.mockito
     testImplementation dependencies.junit
@@ -15,13 +17,11 @@ dependencies {
 
     //testImplementation dependencies.robelectric
 
-    dependencies.dagger.each {
-        implementation it
-    }
+    dependencies.navComponents.each { implementation it }
 
-    dependencies.daggerAnnotations.each {
-        kapt it
-    }
+    dependencies.dagger.each { implementation it }
+
+    dependencies.daggerAnnotations.each { kapt it }
 
     testImplementation dependencies.junit
 
