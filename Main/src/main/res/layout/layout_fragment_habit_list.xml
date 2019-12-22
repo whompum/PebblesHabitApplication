@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contentList"
+    android:background="#fffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="36sp"
+        android:textColor="@color/dark_grey"
+        android:layout_gravity="center"
+        android:text="hello, world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</FrameLayout>
+
+<!--
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contentList"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginStart="?attr/mSpaceL"
+    android:layout_marginTop="?attr/mSpaceL"
+    android:layout_marginEnd="?attr/mSpaceL"
+    android:layout_marginBottom="?attr/mSpaceL" />
+    -->
