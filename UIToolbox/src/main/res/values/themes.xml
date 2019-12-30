@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?><!--
     Define app-wide themes here for support of different color pallets
     and dark mode
-    TODO: Update styles for  Material Themes
+    TODO: R&D on Material Theming (mainly colors - Support for runtime theme deltas)
     TODO: Create Text Appearance!
  -->
 <resources>

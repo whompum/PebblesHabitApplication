@@ -15,6 +15,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_graph" />
 
+    <!--
+        TODO Setup tabs with proper Drawables
+        TODO Style tabs Properly
+    -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_tab_view"
         android:layout_width="match_parent"

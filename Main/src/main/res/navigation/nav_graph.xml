@@ -5,6 +5,6 @@
     app:startDestination="@id/habit_list">
 
     <fragment android:id="@+id/habit_list"
-        android:name="com.whompum.main.HabitListFragment"/>
+        android:name="com.whompum.main.HabitList.HabitListFragment"/>
 
 </navigation>

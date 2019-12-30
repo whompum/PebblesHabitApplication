@@ -26,4 +26,13 @@
     <attr name="mCardCornerRadius" format="dimension"/>
     <attr name="mIconContentSize" format="dimension"/>
     <attr name="mMinTouchTarget" format="dimension"/>
+
+    <!-- Custom states based on habit priorities-->
+    <declare-styleable name="habit_priority_state">
+        <attr name="state_priority_high_uncompleted" format="boolean"/>
+        <attr name="state_priority_high_completed" format="boolean"/>
+        <attr name="state_priority_normal_uncompleted" format="boolean"/>
+        <attr name="state_priority_normal_complete" format="boolean"/>
+    </declare-styleable>
+
 </resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--
+        TODO Create Text Styling for this class and others (Text Appearance!!)
+        TODO Clean up xml file
+     -->
+
+    <com.whompum.uitoolbox.PriorityStatefullImageView
+        android:id="@+id/priority_image"
+        android:layout_width="@dimen/min_icon_view_size"
+        android:layout_height="@dimen/min_icon_view_size"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_habit_priority" />
+
+    <TextView
+        android:id="@+id/habit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="?attr/mSpaceL"
+        android:layout_toEndOf="@id/priority_image"
+        android:textSize="?attr/mFontSizeL"
+        tools:text="Working Out" />
+
+    <TextView
+        android:id="@+id/habit_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/habit_title"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="?attr/mSpaceL"
+        android:layout_toEndOf="@id/priority_image"
+        android:textColor="@color/milk_white"
+        android:textSize="?attr/mFontSizeM"
+        tools:text="Mon . Wed . Thur" />
+
+</RelativeLayout>
