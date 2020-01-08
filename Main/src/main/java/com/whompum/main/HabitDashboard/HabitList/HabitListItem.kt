@@ -1,4 +1,4 @@
-package com.whompum.main.HabitList
+package com.whompum.main.HabitDashboard.HabitList
 
 import com.whompum.models.Habit.HabitPriority
 import com.whompum.uitoolbox.List.ListItem

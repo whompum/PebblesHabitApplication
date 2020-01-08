@@ -4,12 +4,11 @@
     android:id="@+id/main_content_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:paddingStart="?attr/mSpaceL"
     android:background="?android:attr/selectableItemBackground"
-    android:backgroundTint="@color/milk_white"
     android:clickable="true"
     android:focusable="true"
-    android:minHeight="@dimen/header_min_height"
-    tools:background="@color/milk_white">
+    android:minHeight="@dimen/header_min_height">
 
     <TextView
         android:id="@+id/header_title"
@@ -17,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="?attr/mSpaceL"
-        android:textSize="?attr/mFontSizeM"
+        android:textAppearance="@style/TextAppearance.AppCompat.PebblesTextAppearance.Medium"
         tools:text="Header Title" />
 
 </FrameLayout>

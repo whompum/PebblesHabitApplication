@@ -1,4 +1,4 @@
-package com.whompum.main.HabitList
+package com.whompum.main.HabitDashboard.HabitList
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,8 +12,7 @@ import com.whompum.main.R
  * @author Bryan A. Mills
  * @date December 21st, 2019
  */
-//TODO Create a xml file for the filtering section.
-//TODO Create an  XML File for the Header View
+//TODO Launch material bottom sheet when filtering clicked to change filter
 //TODO Setup MVP Architecture Here
 //TODO Setup Data management from Presenter
 //TODO Create a "New Habit" Screen and navigate to it when FAB clicked.

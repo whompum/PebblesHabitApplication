@@ -1,4 +1,4 @@
-package com.whompum.main.HabitList
+package com.whompum.main.HabitDashboard.HabitList
 
 import android.view.View
 import android.widget.TextView

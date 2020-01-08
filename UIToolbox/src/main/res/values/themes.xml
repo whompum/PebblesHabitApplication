@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?><!--
     Define app-wide themes here for support of different color pallets
     and dark mode
-    TODO: R&D on Material Theming (mainly colors - Support for runtime theme deltas)
-    TODO: Create Text Appearance!
+    TODO: R&D on Material Theming (mainly colors - Support for runtime theme deltas)sty
  -->
 <resources>
 
     <style name="AppThemeMain" parent="Theme.MaterialComponents.Light.NoActionBar">
 
+        <!-- Primary Color of the application. Can be customized via code -->
+        <item name="mColorAccent">@color/pink</item>
+
         <!-- Android Attributes -->
-        <item name="colorPrimary">@color/dark_grey</item>
-        <item name="colorPrimaryDark">@color/dark_grey</item>
-        <item name="colorAccent">@color/red</item>
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@color/milk_white</item>
+        <item name="colorAccent">?attr/mColorAccent</item>
         <item name="android:textColorPrimary">@color/dark_grey</item>
 
         <item name="android:textSize">14sp</item> <!-- Affects TextViews-->
@@ -28,8 +30,9 @@
 
         <!-- Local Attributes -->
         <item name="mColorError">@color/orange</item>
-        <item name="mIconTint">@color/dark_grey</item>
+        <item name="mColorIcon">@color/dark_grey</item>
         <item name="mColorButton">@color/dark_grey</item>
+        <item name="mColorFont">@color/dark_grey</item>
         <item name="mColorFab">@android:color/white</item>
 
         <item name="mSpaceXL">@dimen/padding_xlarge</item>
@@ -38,7 +41,7 @@
         <item name="mSpace">@dimen/padding_default</item>
 
         <item name="mFontSizeL">32dp</item> <!-- Keep as DP! -->
-        <item name="mFontSizeM">18dp</item> <!-- Keep as DP! -->
+        <item name="mFontSizeM">24dp</item> <!-- Keep as DP! -->
         <item name="mFontSize">14sp</item>
         <item name="mFontSizeS">12sp</item>
 

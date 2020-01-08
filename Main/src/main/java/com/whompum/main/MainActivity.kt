@@ -7,7 +7,9 @@ import androidx.navigation.ui.NavigationUI
 import kotlinx.android.synthetic.main.layout_activity_main.*
 
 //TODO Manipulate backstack in case actively logged in, so we skip login and land here.
-//TODO Setup navigation graph with HabitListFragment as starting point
+//TODO Setup navigation graph with the main fragment as starting point (containing habit/dashboard)
+//TODO Create Dashboard fragment
+//TODO Create the header @ the top of the main fragment page
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

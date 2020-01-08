@@ -12,6 +12,6 @@
         State Priority-Normal completed/uncompleted
     -->
     <item android:drawable="@drawable/icon_star_empty" app:state_priority_normal_uncompleted="true" />
-    <item android:drawable="@drawable/icon_star_empty" app:state_priority_normal_completed="true" />
+    <item android:drawable="@drawable/icon_star_full" app:state_priority_normal_completed="true" />
 
 </selector>
