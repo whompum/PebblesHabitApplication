@@ -25,7 +25,9 @@ abstract class ListAdapter<T> : RecyclerView.Adapter<BindableViewHolder<T>>() {
     protected var inflater: LayoutInflater? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BindableViewHolder<T> {
-        inflater?.let { inflater = LayoutInflater.from(parent.context) }
+        if (inflater == null)
+            inflater = LayoutInflater.from(parent.context)
+
         return getHolder(inflater!!.inflate(getLayout(viewType), parent, false), viewType)
     }
 
@@ -40,7 +42,8 @@ abstract class ListAdapter<T> : RecyclerView.Adapter<BindableViewHolder<T>>() {
     /**
      * Single client interface to add data to this adapters data set.
      */
-    fun swapDataset(newData: ArrayList<T>) {
+    @CallSuper
+    open fun swapDataset(newData: ArrayList<T>) {
         dataset = newData
         DiffUtil.calculateDiff(getDiffUtilCallback(newData)).dispatchUpdatesTo(this)
     }
