@@ -9,9 +9,7 @@
     <item android:drawable="@drawable/icon_star_full" app:state_priority_high_completed="true" />
 
     <!--
-        State Priority-Normal completed/uncompleted
+        TODO Add other states here!
     -->
-    <item android:drawable="@drawable/icon_star_empty" app:state_priority_normal_uncompleted="true" />
-    <item android:drawable="@drawable/icon_star_full" app:state_priority_normal_completed="true" />
 
 </selector>
