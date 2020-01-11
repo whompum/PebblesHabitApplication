@@ -3,6 +3,7 @@
 
     <!-- Color Pallet -->
     <attr name="mColorError" format="color"/>
+    <attr name="mColorHighPri" format="color"/>
     <attr name="mColorButton" format="color"/>
     <attr name="mColorFab" format="color"/>
     <attr name="mColorIcon" format="color" />
