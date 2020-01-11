@@ -40,6 +40,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <!--
+                    TODO Create proper drawable / illustration for this no data scenario
+                -->
                 <TextView
                     android:id="@id/placeholder"
                     android:layout_width="wrap_content"
