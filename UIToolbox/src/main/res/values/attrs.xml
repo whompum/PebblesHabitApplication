@@ -33,7 +33,7 @@
         <attr name="state_priority_high_uncompleted" format="boolean"/>
         <attr name="state_priority_high_completed" format="boolean"/>
         <attr name="state_priority_normal_uncompleted" format="boolean"/>
-        <attr name="state_priority_normal_complete" format="boolean"/>
+        <attr name="state_priority_normal_completed" format="boolean"/>
     </declare-styleable>
 
 </resources>
