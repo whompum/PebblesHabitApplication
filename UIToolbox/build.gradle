@@ -7,7 +7,7 @@ dependencies {
     def dependencies = rootProject.ext
 
     implementation dependencies.jars
-
+    implementation dependencies.timber
     api dependencies.recyclerView
     api dependencies.constraintLayout
     api dependencies.cardView

@@ -10,6 +10,8 @@ dependencies {
 
     implementation dependencies.viewPager
 
+    implementation dependencies.timber
+
     testImplementation dependencies.testCore
     testImplementation dependencies.mockito
     testImplementation dependencies.junit
