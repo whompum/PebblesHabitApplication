@@ -2,14 +2,10 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!--
-        State Priority-High completed/uncompleted
-    -->
     <item android:drawable="@drawable/icon_star_empty" app:state_priority_high_uncompleted="true" />
     <item android:drawable="@drawable/icon_star_full" app:state_priority_high_completed="true" />
 
-    <!--
-        TODO Add other states here!
-    -->
+    <item android:drawable="@drawable/icon_circle_empty" app:state_priority_normal_uncompleted="true" />
+    <item android:drawable="@drawable/icon_circle_check" app:state_priority_normal_completed="true" />
 
 </selector>
