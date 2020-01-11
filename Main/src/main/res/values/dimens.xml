@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="habit_dashboard_min_height">142dp</dimen>
+</resources>
