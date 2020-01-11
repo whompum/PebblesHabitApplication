@@ -73,6 +73,6 @@ fun <T : Fragment> getOrCreateFragment(
  * @param view the view subject to toggle visibility on
  * @param predicate a callback function to return the result of visibility togglin
  */
-fun toggleViewVisibility(view: View, predicate: () -> Boolean) {
+inline fun toggleViewVisibility(view: View, predicate: () -> Boolean) {
     view.visibility = if (predicate()) View.VISIBLE else View.GONE
 }
