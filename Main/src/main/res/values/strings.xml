@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="habits_list_tab_title">Habits</string>
+    <string name="habits_tab_title">Habits</string>
     <string name="dashboard_tab_title">Dashboard</string>
 </resources>
