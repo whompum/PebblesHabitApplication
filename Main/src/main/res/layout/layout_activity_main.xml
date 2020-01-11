@@ -4,6 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--
+        TODO Setup Navigation Tabs with proper icons
+        TODO Increase Nav-Tabs height to match design
+     -->
+
     <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -15,17 +20,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_graph" />
 
-    <!--
-        TODO Setup tabs with proper Drawables
-        TODO Style tabs Properly
-    -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_tab_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:labelVisibilityMode="unlabeled"
         android:background="#ffffff"
         android:elevation="6dp"
+        app:itemIconTint="?android:colorAccent"
+        app:labelVisibilityMode="unlabeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/navigation_tabs_menu" />
