@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:background="@color/pink">
 
     <androidx.cardview.widget.CardView
@@ -10,11 +11,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="?attr/mSpace"
-        android:layout_marginEnd="?attr/mSpace"
         android:layout_marginTop="?attr/mSpace"
+        android:layout_marginEnd="?attr/mSpace"
         android:layout_marginBottom="?attr/mSpaceL">
 
         <LinearLayout
+            android:id="@id/main_content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
@@ -25,20 +27,37 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="?attr/mSpaceXL"
                 android:layout_marginTop="?attr/mSpaceXL"
+                android:background="?android:selectableItemBackgroundBorderless"
                 android:clickable="true"
                 android:drawableEnd="@drawable/icon_filter"
                 android:drawablePadding="8dp"
                 android:focusable="true"
                 android:gravity="center_vertical"
-                android:textAppearance="@style/TextAppearance.AppCompat.PebblesTextAppearance"
-                tools:text="Today" />
+                android:text="Today"
+                android:textAppearance="@style/TextAppearance.AppCompat.PebblesTextAppearance" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/contentList"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="?attr/mSpaceXL"
-                tools:listitem="@layout/habit_list_item" />
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@id/placeholder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxWidth="260dp"
+                    android:text="No habits currently. If you would like to add one, click the plus button!"
+                    android:textAlignment="center"
+                    android:visibility="gone" />
+
+                <com.whompum.uitoolbox.List.EmptyViewRecyclerView
+                    android:id="@id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="?attr/mSpaceXL"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/habit_list_item" />
+            </FrameLayout>
 
         </LinearLayout>
 
