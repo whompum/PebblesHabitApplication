@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="habit_dashboard_min_height">142dp</dimen>
+    <dimen name="icon_priority_habit_view_size">14dp</dimen>
 </resources>
