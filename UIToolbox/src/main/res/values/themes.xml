@@ -30,6 +30,7 @@
 
         <!-- Local Attributes -->
         <item name="mColorError">@color/orange</item>
+        <item name="mColorHighPri">@color/gold</item>
         <item name="mColorIcon">@color/dark_grey</item>
         <item name="mColorButton">@color/dark_grey</item>
         <item name="mColorFont">@color/dark_grey</item>
