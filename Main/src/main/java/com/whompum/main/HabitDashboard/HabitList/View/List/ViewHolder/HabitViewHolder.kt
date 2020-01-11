@@ -17,7 +17,7 @@ class HabitViewHolder(v: View): BindableViewHolder<HabitListItem>(v) {
             .text = data.title
 
         itemView.findViewById<PriorityStatefullImageView>(R.id.priority_image)
-            .priority = data.state
+            .setPriority(data.state)
 
         itemView.findViewById<TextView>(R.id.habit_time)
             .text = data.days
