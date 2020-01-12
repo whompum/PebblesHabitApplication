@@ -5,10 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--
-        TODO Figure out why font sizes aren't being applied properly to the pebble text fields
-    -->
-
     <androidx.cardview.widget.CardView
         android:id="@+id/habit_dashboard_header"
         style="@style/Widget.MaterialComponents.CardView.CustomCard"
