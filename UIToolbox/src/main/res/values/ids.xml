@@ -3,7 +3,12 @@
     <item name="root_view" type="id"/>
     <item name="main_content_container" type="id"/>
 
+    <!-- Common View IDs-->
     <item name="main_fab" type="id"/>
+    <item name="main_content" type="id"/>
+    <item name="viewpager" type="id"/>
+    <item name="recyclerview" type="id"/>
+    <item name="placeholder" type="id"/>
 
     <item name="app_icon" type="id"/>
     <item name="app_title" type="id"/>

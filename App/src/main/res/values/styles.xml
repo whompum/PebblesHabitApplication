@@ -12,7 +12,7 @@
 
     <style name="CredentialsTextInput.Password">
         <item name="passwordToggleEnabled">true</item>
-        <item name="passwordToggleTint">?attr/mIconTint</item>
+        <item name="passwordToggleTint">?attr/mColorIcon</item>
     </style>
 
 </resources>

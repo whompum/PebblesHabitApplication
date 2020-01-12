@@ -4,6 +4,8 @@ import com.whompum.app.BuildConfig.ADMIN_PASSWORD
 import com.whompum.app.BuildConfig.ADMIN_USERNAME
 import com.whompum.app.BuildConfig.USE_ADMIN_ACCOUNT
 
+//TODO Map out credential validation flow
+//Setup "Stay signed-in" mode
 class LaunchPresenter : LaunchContract.LaunchPresenter() {
 
     override fun validateUsernameAndPassword(username: String, password: String) {

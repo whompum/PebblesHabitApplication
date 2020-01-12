@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MenuTitle">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/icon_dumbell"
+        android:orderInCategory="1"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/explore"
+        android:icon="@drawable/icon_clock"
+        android:orderInCategory="2"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/icon_more_horizontal"
+        android:orderInCategory="3"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?><!--
     Defines view styling here
-    TODO Setup Text Appearance
  -->
 <resources>
+
+    <style name="TextAppearance.AppCompat.PebblesTextAppearance">
+        <item name="android:textSize">?attr/mFontSize</item>
+        <item name="android:textColor">?attr/mColorFont</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.PebblesTextAppearance.Small">
+        <item name="android:textSize">?attr/mFontSizeS</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.PebblesTextAppearance.Medium">
+        <item name="android:textSize">?attr/mFontSizeM</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.PebblesTextAppearance.Large">
+        <item name="android:textSize">?attr/mFontSizeL</item>
+    </style>
 
     <style name="Widget.MaterialComponents.Button.CustomButton">
         <item name="android:textSize">?attr/mFontSizeM</item>

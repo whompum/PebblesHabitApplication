@@ -3,8 +3,10 @@ package com.whompum.uitoolbox.List
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.CallSuper
 import androidx.annotation.LayoutRes
 import androidx.annotation.VisibleForTesting
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 
 /**
@@ -12,6 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
  *
  * @author Bryan A. Mills
  * @date August 8th, 2019
+ * TODO Setup Async Coroutines for the DiffUtil
+ * TODO Setup Swapping / Insertion / Deletion contracts (use an interface to represent these operations)
  */
 abstract class ListAdapter<T> : RecyclerView.Adapter<BindableViewHolder<T>>() {
 
@@ -22,8 +26,10 @@ abstract class ListAdapter<T> : RecyclerView.Adapter<BindableViewHolder<T>>() {
     protected var inflater: LayoutInflater? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BindableViewHolder<T> {
-        inflater?.let { inflater = LayoutInflater.from(parent.context) }
-        return getHolder(inflater!!.inflate(getLayout(viewType), parent, false))
+        if (inflater == null)
+            inflater = LayoutInflater.from(parent.context)
+
+        return getHolder(inflater!!.inflate(getLayout(viewType), parent, false), viewType)
     }
 
     override fun getItemCount() = dataset.size
@@ -33,6 +39,20 @@ abstract class ListAdapter<T> : RecyclerView.Adapter<BindableViewHolder<T>>() {
             dataset[position]
         )
     }
+
+    /**
+     * Single client interface to add data to this adapters data set.
+     */
+    @CallSuper
+    open fun swapDataset(newData: ArrayList<T>) {
+        DiffUtil.calculateDiff(getDiffUtilCallback(newData)).dispatchUpdatesTo(this)
+        this.dataset = newData
+    }
+
+    /**
+     * Returns a [DiffUtil.Callback] implementation
+     */
+    fun getDiffUtilCallback(newData: ArrayList<T>): DiffUtil.Callback = DefaultDiffUtilCallback<T>(dataset, newData)
 
     /**
      * @param The view type for this layout
@@ -45,5 +65,5 @@ abstract class ListAdapter<T> : RecyclerView.Adapter<BindableViewHolder<T>>() {
      * Overridden by a subclass to define its [RecyclerView.ViewHolder implementation]
      * @return A  subclass defined implementation of [BindableViewHolder]
      */
-    abstract fun getHolder(v: View): BindableViewHolder<T>
+    abstract fun getHolder(v: View, viewType: Int): BindableViewHolder<T>
 }

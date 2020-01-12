@@ -1,16 +1,21 @@
 package com.whompum.app
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.whompum.app.Account.ValidationStrategies.notNullOrEmptyValidation
 import com.whompum.app.Account.ValidationStrategies.passwordMeetsBasicRequirements
+import com.whompum.main.MainActivity
 import com.whompum.sharedmodule.Screen.LoginScreen
 import com.whompum.uitoolbox.Utils.makeErrorSnackbar
 import kotlinx.android.synthetic.main.screen_login.*
 import javax.inject.Inject
 
+//TODO Setup Signup flow
+//TODO Setup for ADMIN build variant / ADMIN mode
+//Setup error handling for text / api responses
 class LaunchActivity : AppCompatActivity(), LaunchContract.LaunchView, LoginScreen {
 
     @Inject
@@ -56,11 +61,22 @@ class LaunchActivity : AppCompatActivity(), LaunchContract.LaunchView, LoginScre
         main_fab.animation = AnimationUtils.loadAnimation(this, R.anim.explode_animation)
 
         presenter.attach(this)
-        loginButton.setOnClickListener(loginAction)
+        //loginButton.setOnClickListener(loginAction)
+        loginButton.setOnClickListener { openApp() }
     }
 
     override fun onCredentialsValidated(username: String, password: String, isValid: Boolean) {
         //If isValid is false, show proper error message!
+        if (isValid) {
+            //Use nav components L8R
+            openApp()
+        }
+    }
+
+
+    fun openApp() {
+        val i = Intent(this, MainActivity::class.java)
+        startActivity(i)
     }
 
     fun displayErrorSnackbar(msg: String) {

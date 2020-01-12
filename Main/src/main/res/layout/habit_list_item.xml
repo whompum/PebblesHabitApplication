@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingStart="?attr/mSpaceXL"
+    android:paddingEnd="?attr/mSpaceXL"
+    android:minHeight="@dimen/habit_list_item_min_height">
+
+    <com.whompum.uitoolbox.PriorityStatefullImageView
+        android:id="@+id/priority_image"
+        android:layout_width="@dimen/icon_priority_habit_view_size"
+        android:layout_height="@dimen/icon_priority_habit_view_size"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="?attr/mSpaceXL"
+        android:src="@drawable/icon_habit_priority" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="?attr/mSpaceM"
+        android:layout_toEndOf="@id/priority_image"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/habit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="?attr/mSpaceL"
+            android:textAppearance="@style/TextAppearance.AppCompat.PebblesTextAppearance"
+            tools:text="Working Out" />
+
+        <TextView
+            android:id="@+id/habit_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="?attr/mSpaceL"
+            android:textAppearance="@style/TextAppearance.AppCompat.PebblesTextAppearance.Small"
+            android:textColor="@color/milk_white"
+            tools:text="Mon . Wed . Thur" />
+    </LinearLayout>
+
+</RelativeLayout>

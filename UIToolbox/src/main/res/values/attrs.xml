@@ -3,10 +3,12 @@
 
     <!-- Color Pallet -->
     <attr name="mColorError" format="color"/>
+    <attr name="mColorHighPri" format="color"/>
     <attr name="mColorButton" format="color"/>
     <attr name="mColorFab" format="color"/>
-    <attr name="mIconTint" format="color" />
-
+    <attr name="mColorIcon" format="color" />
+    <attr name="mColorFont" format="color"/>
+    <attr name="mColorAccent" format="color"/>
     <!-- Dimensions - Padding -->
     <attr name="mSpaceXL" format="dimension" />
     <attr name="mSpaceL" format="dimension" />
@@ -26,4 +28,13 @@
     <attr name="mCardCornerRadius" format="dimension"/>
     <attr name="mIconContentSize" format="dimension"/>
     <attr name="mMinTouchTarget" format="dimension"/>
+
+    <!-- Custom states based on habit priorities-->
+    <declare-styleable name="habit_priority_state">
+        <attr name="state_priority_high_uncompleted" format="boolean"/>
+        <attr name="state_priority_high_completed" format="boolean"/>
+        <attr name="state_priority_normal_uncompleted" format="boolean"/>
+        <attr name="state_priority_normal_completed" format="boolean"/>
+    </declare-styleable>
+
 </resources>

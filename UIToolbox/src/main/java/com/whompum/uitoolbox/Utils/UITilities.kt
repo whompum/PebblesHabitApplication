@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.res.Resources
 import android.util.TypedValue
 import android.view.View
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.google.android.material.snackbar.Snackbar
 import com.whompum.uitoolbox.R
 
@@ -49,3 +51,28 @@ fun getScreenWidthOffset(ctx: Context, offsetAttribute: Int): Int {
     return size
 }
 
+/**
+ * Checks for existing instances of a [Fragment] within a [FragmentManager] based on a provided
+ * tag. If one isn't found, one is created and returned.
+ *
+ * TODO Provide a impl to use the newInstance(...) pattern commonly seen on fragments.
+ *
+ * @param tag A tag to identify a fragment. If not found, one will be inflated
+ * @param fragmentManager The fragment manager to check for the fragment from
+ * @param cls The fragment type to inflate
+ */
+fun <T : Fragment> getOrCreateFragment(
+    tag: String,
+    fragmentManager: FragmentManager,
+    cls: Class<out T>
+): Fragment =
+    fragmentManager.findFragmentByTag(tag) ?: cls.newInstance()
+
+/**
+ * Shows/hides a view based on a given predicate
+ * @param view the view subject to toggle visibility on
+ * @param predicate a callback function to return the result of visibility togglin
+ */
+inline fun toggleViewVisibility(view: View, predicate: () -> Boolean) {
+    view.visibility = if (predicate()) View.VISIBLE else View.GONE
+}

@@ -2,6 +2,7 @@ package com.whompum.app.Account
 
 import android.text.TextUtils.isEmpty
 
+//TODO Setup REGEX for password validations
 object ValidationStrategies {
 
     /**

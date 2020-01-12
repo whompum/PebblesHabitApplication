@@ -9,5 +9,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.whompum.main.MainActivity"
+            android:theme="@style/AppThemeMain"/>
+
     </application>
 </manifest>
