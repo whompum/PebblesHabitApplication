@@ -16,8 +16,6 @@
         <item name="colorAccent">?attr/mColorAccent</item>
         <item name="android:textColorPrimary">@color/dark_grey</item>
 
-        <item name="android:textSize">14sp</item> <!-- Affects TextViews-->
-
         <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button.CustomButton</item>
         <item name="floatingActionButtonStyle">@style/Widget.MaterialComponents.FloatingActionButton.CustomFab</item>
         <item name="materialCardViewStyle">@style/Widget.MaterialComponents.CardView.CustomCard</item>
