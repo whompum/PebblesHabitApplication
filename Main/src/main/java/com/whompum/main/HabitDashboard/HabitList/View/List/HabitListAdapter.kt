@@ -11,7 +11,6 @@ import com.whompum.uitoolbox.List.HeaderListItem
 import com.whompum.uitoolbox.List.ListAdapter
 import com.whompum.uitoolbox.List.ListItem
 
-//TODO Come up with a good algorithm to override swapDataset and add all header items as well as the headers into the main data set (merge)
 class HabitListAdapter : ListAdapter<ListItem>() {
 
     override fun getLayout(viewType: Int) =
