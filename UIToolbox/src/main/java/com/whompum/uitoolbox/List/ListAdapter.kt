@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
  * @author Bryan A. Mills
  * @date August 8th, 2019
  * TODO Setup Async Coroutines for the DiffUtil
+ * TODO Setup Swapping / Insertion / Deletion contracts (use an interface to represent these operations)
  */
 abstract class ListAdapter<T> : RecyclerView.Adapter<BindableViewHolder<T>>() {
 
@@ -44,8 +45,8 @@ abstract class ListAdapter<T> : RecyclerView.Adapter<BindableViewHolder<T>>() {
      */
     @CallSuper
     open fun swapDataset(newData: ArrayList<T>) {
-        dataset = newData
         DiffUtil.calculateDiff(getDiffUtilCallback(newData)).dispatchUpdatesTo(this)
+        this.dataset = newData
     }
 
     /**
